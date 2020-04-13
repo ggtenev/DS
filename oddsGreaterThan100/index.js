@@ -27,7 +27,8 @@ function oddsGreaterThan100() {
 //                         |______|______|______|______|______|
 
 mocha.setup("bdd");
-const { assert } = chai;
+const { assert } = chai; 
+//something
 
 describe("oddsGreaterThan100", () => {
   it("returns an odd number.", () => {
