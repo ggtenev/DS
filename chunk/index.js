@@ -6,7 +6,24 @@
 // chunk(["a", "b", "c", "d"], 2) --> [[ "a", "b"], ["c", "d"]]
 // chunk([0, 1, 2, 3, 4, 5], 4) -->  [[0, 1, 2, 3], [4, 5]]
 
-function chunk(array, size) {}
+function chunk(array, size) {
+  //empty array
+  
+  let end = []
+  //first two pushed then shifted
+  do{
+    let chunks = []
+    for(let i = 0; i <size; i++){
+      if(!array.length) break
+      chunks[i] = array.shift()
+      
+    }
+    end.push(chunks)
+  }while(array.length)
+  // check if undefined and pop them
+  console.log(end)
+  return end
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

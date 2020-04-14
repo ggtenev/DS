@@ -4,7 +4,29 @@
 //   reverse('abcd') === 'dcba'
 //   reverse('Hello!') === '!olleH'
 
-function reverse(str) {}
+function reverse(str) {
+	//SOLUTION 1
+//  let s = ''
+//  for(let i = str.length-1; i >=0; i--){
+// 		s+=str[i]
+//  }
+// 	return s
+
+  //SOLUTION2
+// let arr = str.split('')
+// for(let i = 0; i < arr.length/2; i++){
+// 	let temp = arr[i]
+// 	arr[i] = arr[arr.length - 1 - i]
+// 	arr[arr.length - 1 - i] = temp
+// }
+// return arr.join('')
+
+		//SOLUTION3
+	return str.split('').reduce((output,current) => {
+		output = current + output
+		return output
+	},'')
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

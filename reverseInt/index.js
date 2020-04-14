@@ -7,7 +7,23 @@
 //   reverseInt(-13) === -31
 //   reverseInt(-100) === -1
 
-function reverseInt(n) {}
+function reverseInt(n) {
+
+  //SOLUTION 1
+  // if( n > 0){
+  //   return Number(String(n).split('').reverse().join(''))
+  // } else if(n < 0){
+  //   return parseInt(String(n).split('').reverse().join('')) * -1
+  // }
+  //SOLUTION 2
+  // if(n > 0){
+  //   return parseInt(n.toString().split('').reverse().join(''))
+  // }else if(n < 0) {
+  //   let rev = n.toString().split('').reverse().join('')
+  //   rev = rev.replace(/-/,'')
+  //   return parseInt(-rev)
+  // }
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

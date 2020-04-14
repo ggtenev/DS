@@ -5,7 +5,19 @@
 //   palindrome("Madam") === true
 //   palindrome("love") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+  //SOLUTION1
+  // return str.toLowerCase().split('').reverse().join('') === str.toLowerCase()
+
+  //SOLUTION 2
+  // let revStr = ''
+  // for(let i = 0; i < str.length; i++){
+  //   revStr = str[i] + revStr
+  // }
+  // return str.toLowerCase() === revStr.toLowerCase()
+
+  
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
