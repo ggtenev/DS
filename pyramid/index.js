@@ -13,7 +13,19 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+  for(let i = n; i > 0; i--){
+    let step = ''
+    for(let j = 0; j < n; j++){
+      if(j < i) step += ' '
+      else step +='#'
+    }
+    for(let m = 0; m < n; m++){
+      step += ' '
+    }
+    console.log(step)
+  }
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

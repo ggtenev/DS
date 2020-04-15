@@ -7,7 +7,40 @@
 //   vowels('aEiOu') --> 5
 //   vowels('I am a world-class developer using iterations') --> 16
 
-function vowels(str) {}
+function vowels(str) {
+  str = str.toLowerCase()
+  // const vowels = ['a','e','i','o','u']
+  //SOLUTION 1
+  // let num = 0;
+  // for(let i of str){
+  //   for(let j of vowels){
+  //     if(i === j)num++
+  //   }
+  // }
+  // return num
+  
+  //SOLUTION 2
+  // let numOfVowels = 0;
+  // const vowels = {
+  //   a:0,
+  //   e:0,
+  //   i:0,
+  //   o:0,
+  //   u:0
+  // }
+  // for(let i of str){
+  //   if(vowels.hasOwnProperty(i)) numOfVowels++
+  // }
+  // return numOfVowels
+
+  //SOLUTION 3
+ const reg = /[aeiou]/i
+ let n = 0
+  for(let i of str){
+    if(reg.test(i)) n++
+  }
+  return n
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \

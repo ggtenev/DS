@@ -8,7 +8,6 @@
 
 function chunk(array, size) {
   //empty array
-  
   let end = []
   //first two pushed then shifted
   do{
@@ -16,7 +15,6 @@ function chunk(array, size) {
     for(let i = 0; i <size; i++){
       if(!array.length) break
       chunks[i] = array.shift()
-      
     }
     end.push(chunks)
   }while(array.length)
