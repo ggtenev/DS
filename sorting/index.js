@@ -20,7 +20,21 @@ function bubbleSort(arr) {
 }
 
 //selectionSort works by having sorted data accumulate at start of array
-function selectionSort(arr) {}
+function selectionSort(arr) {
+  for(let i = 0; i < arr.length; i++){
+    let min = arr[i];
+    let idx
+    for (let j = i + 1; j < arr.length; j++){
+      if(arr[j] < min)  {
+        min = arr[j]
+       idx = j }
+    }
+    let temp = arr[i]
+    arr[i] = min
+    arr[idx] = temp
+  }
+  return arr
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
@@ -62,7 +76,7 @@ describe("Bubble Sort", () => {
   });
 });
 
-describe.skip("Selection Sort", () => {
+describe("Selection Sort", () => {
   it("sorts an array", () => {
     assert.deepEqual(selectionSort([5, 1, 3, 2, 4]), [1, 2, 3, 4, 5]);
   });

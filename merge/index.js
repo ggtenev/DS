@@ -5,7 +5,30 @@
 // merge([1,5], [4,6,7]) === [1,4,5,6,7]
 // merge([4,6,7], [1,5]) === [1,4,5,6,7]
 
-function merge(sortedArr1, sortedArr2) {}
+function merge(sortedArr1, sortedArr2) {
+  const arr = []
+  const len = sortedArr1.length > sortedArr2.length ? sortedArr1.length : sortedArr2.length
+  let p1 = 0
+  let p2 = 0
+  while(p1 < sortedArr1.length && p2 < sortedArr2.length){
+    if(sortedArr1[p1] < sortedArr2[p2]){
+      arr.push(sortedArr1[p1])
+      p1++
+    } else{
+      arr.push(sortedArr2[p2])
+      p2++
+    }
+  }
+  while(p1 < sortedArr1.length) {
+    arr.push(sortedArr1[p1])
+      p1++
+  }
+  while(p2 < sortedArr2.length) {
+    arr.push(sortedArr2[p2])
+      p2++
+  }
+  return arr
+}
 
 // _________ _______  _______ _________   _______  _______  _______  _______  _______
 // \__   __/(  ____ \(  ____ \\__   __/  (  ____ \(  ___  )(  ____ \(  ____ \(  ____ \
